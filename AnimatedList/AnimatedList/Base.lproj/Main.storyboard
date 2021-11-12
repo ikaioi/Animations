@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="AnimatedList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1nn-MP-dCH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" rowHeight="110" id="U3O-lr-YOR" customClass="MainTableViewCell" customModule="AnimatedList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U3O-lr-YOR" id="Kp9-lD-uKj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQ9-iL-EUM">
+                                                    <rect key="frame" x="20" y="11" width="374" height="88"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mexico" translatesAutoresizingMaskIntoConstraints="NO" id="zYb-wd-7yw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="88"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="zYb-wd-7yw" secondAttribute="bottom" id="5eL-MS-UKG"/>
+                                                        <constraint firstItem="zYb-wd-7yw" firstAttribute="top" secondItem="kQ9-iL-EUM" secondAttribute="top" id="7Tj-UM-gxp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zYb-wd-7yw" secondAttribute="trailing" id="FZt-l8-QOC"/>
+                                                        <constraint firstItem="zYb-wd-7yw" firstAttribute="leading" secondItem="kQ9-iL-EUM" secondAttribute="leading" id="Orh-Mk-R5u"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kQ9-iL-EUM" firstAttribute="bottom" secondItem="Kp9-lD-uKj" secondAttribute="bottomMargin" id="27z-bZ-3u0"/>
+                                                <constraint firstItem="kQ9-iL-EUM" firstAttribute="leading" secondItem="Kp9-lD-uKj" secondAttribute="leadingMargin" id="8Kb-yg-RIm"/>
+                                                <constraint firstItem="kQ9-iL-EUM" firstAttribute="top" secondItem="Kp9-lD-uKj" secondAttribute="topMargin" id="Qsp-uO-acW"/>
+                                                <constraint firstItem="kQ9-iL-EUM" firstAttribute="trailing" secondItem="Kp9-lD-uKj" secondAttribute="trailingMargin" id="lU4-Qb-7cz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backgroundImageView" destination="zYb-wd-7yw" id="7pP-CC-jgK"/>
+                                            <outlet property="containerView" destination="kQ9-iL-EUM" id="13L-rk-y0e"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JxM-CM-OZj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ofG-O2-Vuw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1nn-MP-dCH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Uha-lE-ck0"/>
+                            <constraint firstItem="1nn-MP-dCH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cwi-h1-MGf"/>
+                            <constraint firstAttribute="bottom" secondItem="1nn-MP-dCH" secondAttribute="bottom" id="m2x-fX-iyb"/>
+                            <constraint firstItem="1nn-MP-dCH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wKa-qa-i0Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="1nn-MP-dCH" id="Giv-zr-JFb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mexico" width="1280" height="1600"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
